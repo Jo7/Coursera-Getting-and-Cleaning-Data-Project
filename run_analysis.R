@@ -57,7 +57,7 @@ Data<-subset(Data,select=selectedNames)
 str(Data)
 
 #Read in activity labels
-activityLabels <- read.table(file.path(path_rf, "activity_labels.txt"),header = FALSE)
+activityLabels <- read.table(file.path(path, "activity_labels.txt"),header = FALSE)
 names(activityLabels)<-c("activityId", "activityType")
 finalData <- merge(Data, activityLabels, by="activityId", all.x=TRUE)
 
@@ -75,7 +75,7 @@ names(finalData)<-gsub("-mean", "Mean", names(finalData))
 #Create a second, independent tidy data set with the average of each variable for each activity and each subject
 library(dplyr)
 finalData <- select(finalData, -activityId)
-averageData <- finalData %>% group_by(subject, activityType) %>% summarise_each(funs(mean))
-write.table(averageData, file = "./data/tidydata.txt",row.name=FALSE)
+tidydata <- finalData %>% group_by(subject, activityType) %>% summarise_each(funs(mean))
+write.table(tidydata, file = "./data/tidydata.txt",row.name=FALSE)
 
 
