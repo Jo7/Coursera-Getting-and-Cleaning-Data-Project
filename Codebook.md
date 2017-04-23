@@ -19,7 +19,9 @@ For each record in the dataset it is provided:
 - An identifier of the subject who carried out the experiment.
 
 
-### The `tidydata.txt` created is a data set with the average of each variable for each activity and each subject. 
+### The tidy data set
+
+The `tidydata.txt` created is a data set with the average of each variable for each activity and each subject. 
 
 ## Identifiers
 
