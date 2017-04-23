@@ -4,7 +4,7 @@ The purpose of this project is to demonstrate my ability to collect, work with, 
 
 The goal is to prepare tidy data that can be used for later analysis. 
 
-The R script called run_analysis.R does the following:
+The R script called `run_analysis.R` does the following:
 
 1. Download the dataset if it does not already exist in the working directory.
 2. Merges the training and the test sets to create one data set.
@@ -13,4 +13,4 @@ The R script called run_analysis.R does the following:
 5. Appropriately labels the data set with descriptive activity names.
 6. Creates a tidy data set with the average of each variable for each activity and each subject.
 
-The end result is shown in the file tidydata.txt
+The end result is shown in the file `tidydata.txt`.
